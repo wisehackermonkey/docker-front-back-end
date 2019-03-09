@@ -1,0 +1,52 @@
+{
+  "Services": {
+    "client": {
+      "Args": [
+        "npm",
+        "start"
+      ],
+      "Env": [
+        "NODE_ENV=development"
+      ],
+      "Image": "wisehackermonkey/frontend@sha256:487fc6e62bc2d00f0dfc14109f7b79a69619f8f5b33a221ec62fdf1da37b250e",
+      "Networks": [
+        "default"
+      ],
+      "Ports": [
+        {
+          "Port": 3000,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    "mongo": {
+      "Image": "mongo@sha256:002fda672a0d196325a30736d4c80d04adf6f39dd28db41e6799f42844cab7b8",
+      "Networks": [
+        "default"
+      ],
+      "Ports": [
+        {
+          "Port": 27017,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    "server": {
+      "Args": [
+        "npm",
+        "start"
+      ],
+      "Image": "wisehackermonkey/backend@sha256:73d8e44432835563d970b11449aa75ef2f3041d0c58bdbf59cbf56fc09237459",
+      "Networks": [
+        "default"
+      ],
+      "Ports": [
+        {
+          "Port": 4000,
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "Version": "0.1"
+}
