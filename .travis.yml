@@ -10,7 +10,6 @@ services:
 script:
   - docker-compose pull mongo
   - docker-compose build
-  - docker-compose bundle --push-images
   - docker-compose ps
 
 
