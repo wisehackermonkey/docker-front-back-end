@@ -9,6 +9,7 @@ services:
   server:
     container_name: server
     build: ./backend
+    image: wisehackermonkey/backend:latest
     command: npm start
     volumes:
       - ./server/:/usr/server
@@ -19,6 +20,7 @@ services:
   client:
     container_name: client
     build: ./frontend
+    image: wisehackermonkey/frontend:latest
     command: npm start
     volumes:
       - ./frontend/:/usr/frontend
