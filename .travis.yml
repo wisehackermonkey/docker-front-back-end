@@ -1,4 +1,4 @@
-#language: minimal
+language: minimal
 #language: node_js
 #
 #node_js: '10.0.0' # or another
@@ -6,8 +6,8 @@
 #cache: npm
 
 sudo: required
-services:
-  - docker
+#services:
+#  - docker
 script:
   - docker-compose -f ./docker-compose-build.yml pull
   - docker-compose -f ./docker-compose-build.yml build
