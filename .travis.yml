@@ -1,13 +1,7 @@
 language: minimal
-#language: node_js
-#
-#node_js: '10.0.0' # or another
-#
-#cache: npm
 
 sudo: required
-#services:
-#  - docker
+
 script:
   - docker-compose -f ./docker-compose-build.yml pull
   - docker-compose -f ./docker-compose-build.yml build
@@ -23,6 +17,8 @@ deploy:
   on:
     branch: master
 
+# now to configure notifications
+# https://docs.travis-ci.com/user/notifications/#changing-notification-frequency
 notifications:
   email:
     on_success: never # default: always
