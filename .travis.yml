@@ -1,7 +1,14 @@
+language: node_js
+
+node_js: '10' # or another
+
+cache: npm
+
 sudo: required
 services:
   - docker
 script:
+  - docker-compose pull mongo
   - docker-compose build
   - docker-compose bundle
   - docker-compose ps
