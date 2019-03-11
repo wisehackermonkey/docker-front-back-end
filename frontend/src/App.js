@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            by bill
+            by bill asdfasdf
           </a>
         </header>
       </div>
